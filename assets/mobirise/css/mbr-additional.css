@@ -1,0 +1,21 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+#header1-0 H1 {
+  color: #ffffff;
+}
+#header1-0 P {
+  color: #ffffff;
+}
+#content5-8 P {
+  text-align: left;
+  font-size: 20px;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+#content5-8 .mbr-section-title B {
+  color: #fbfbfb;
+}
+#testimonials1-m .mbr-section-title B {
+  color: #000000;
+  font-size: 48px;
+}
