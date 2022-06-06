@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+.pub-container {
+    display: flex;
+    column-gap: 10rem;
+}
+
+.pub-header {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #15617A;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    width: 20%;
+}
+
+.pub-list {
+    margin-bottom: 2rem;
+    padding: 0.3rem 0;
+}
+
+.pub-date {
+    font-size: 0.8rem;
+    margin-left: auto;
+    font-weight: bold;
+}
+
+.pub-meta {
+    font-size: 0.75rem;
+    margin-right: 0.5rem;
+    border: 1px solid;
+    border-radius: 10%;
+    color: #15617A;
+    padding: 0.1rem 0.4rem;
+}
+
+.pub-meta:hover {
+    background-color: #15617A;
+    color: white;
+}
+
+
+.pub-authors {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 0.85rem;
+    margin-top: 0.1rem;
+}
+
+.pub-title {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.pub-body {
+    /* width: 40%; */
+    max-width: 600px;
+}

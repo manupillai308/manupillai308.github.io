@@ -75,7 +75,7 @@ body {
     /* min-height: 150vh; */
 }
 
-#aboutme {
+#heading {
     display: flex;
     flex-direction: column;
     min-width: fit-content;
