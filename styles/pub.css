@@ -13,10 +13,12 @@
 .pub-header {
     font-size: 1.2rem;
     text-align: center;
+    /* border: 1px solid; */
     color: #15617A;
     font-weight: bold;
     margin-bottom: 1rem;
     width: 20%;
+    min-width: 150px;
 }
 
 .pub-list {

@@ -78,7 +78,8 @@ body {
 #heading {
     display: flex;
     flex-direction: column;
-    min-width: fit-content;
+    /* min-width: fit-content; */
+    /* border: 1px solid; */
 }
 
 .header-style {
