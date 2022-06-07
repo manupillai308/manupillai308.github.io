@@ -29,10 +29,23 @@
 }
 
 .proj-image {
-    background-size: cover;
+    background-size: contain;
     width: 150px;
     height: 150px;
     margin: auto 0;
     padding: 10px;
 }
 
+.pub-meta {
+    font-size: 0.75rem;
+    margin-right: 0.5rem;
+    border: 1px solid;
+    border-radius: 10%;
+    color: #15617A;
+    padding: 0.1rem 0.4rem;
+}
+
+.pub-meta:hover {
+    background-color: #15617A;
+    color: white;
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/pub.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400&display=swap" rel="stylesheet">
@@ -12,6 +12,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./academicons-1.9.2/css/academicons.min.css"/>
     <title>Manu S Pillai</title>
+    <script>
+        function toggle_mail(){
+            mailid = document.getElementById("mailid");
+            mailicon = document.getElementById("mailicon");
+            if(mailid.style.visibility == "hidden"){
+                mailid.style.visibility = "visible";
+                mailicon.className = "fa fa-angle-up";
+            }else{
+                mailid.style.visibility = "hidden";
+                mailicon.className = "fa fa-angle-down";
+            }
+        }
+    </script>
   </head>
   <body>
       <div class="main">
@@ -32,10 +45,24 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container" style="height:65vh">
             <div id="heading">
-                <div class="header-style">Template</div>
-                <div class="body-style">
+                <!-- <div class="header-style" style="visibility: hidden;">Template</div> -->
+                <div class="body-style contact-container">
+                    <div class="contact">
+                        <div class="contact-title">GET IN TOUCH</div>
+                        <div class="contact-body">
+                            I would love to hear from you if you would like to collaborate or have questions!
+                        </div>
+                        <div class="contact-btn" onclick="toggle_mail()">
+                            Email
+                            <i id="mailicon" style="display: inline; margin-left: 5px;" class="fa fa-angle-down"></i>
+                        </div>
+                        <div id="mailid" style="bottom: 10px; margin: 0.5rem auto; visibility: hidden;font-size:0.9rem; position: static;">
+                            manu[dot]pillai@knights.ucf.edu
+                        </div>
+                    </div>
+                    <img src="/images/contact_banner.jpg" class="contact-image box-shadow" />
                 </div>
             </div>
         </div>
