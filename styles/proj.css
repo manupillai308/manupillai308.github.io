@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+.proj-container {
+    display: flex;
+    max-width: 1000px;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.proj-title {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #15617A;
+    margin-bottom: 0.5rem;
+    max-width: fit-content;
+}
+
+.proj-desc {
+    font-family: 'Source Serif Pro', serif;
+    text-align: justify;
+    /* max-width: calc(100% - 150px); */
+}
+
+.proj-image {
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    margin: auto 0;
+    padding: 10px;
+}
+
