@@ -119,7 +119,8 @@ body {
 }
 
 .image {
-    background: url(/images/profile.jpg) no-repeat center;
+    background-repeat: no-repeat;
+    background-position:  center;
     background-size: cover;
     height: 400px;
     min-width: 300px;

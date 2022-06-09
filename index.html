@@ -10,9 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./academicons-1.9.2/css/academicons.min.css"/>
+    <script src="scripts/loader.js"></script>
     <title>Manu S Pillai</title>
   </head>
-  <body onLoad="scrollDiv_init()">
+  <body onLoad="scrollDiv_init(); loadMain();">
       <div class="main">
         <div class="header">
             <div id="title">
@@ -36,7 +37,7 @@
                 <div class="header-style">About Me</div>
                 <div class="body-style">
                     <div>
-                        <div class="image box-shadow"></div>
+                        <div id="aboutme-image" class="image box-shadow"></div>
                         <div class="social">
                             <span class="hover-effect" style="color: #4081EC;">
                                 <i style="margin: 0 1rem;" class="ai ai-google-scholar ai-2x"></i>
@@ -49,8 +50,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="content">
-                        I'm Manu S Pillai, a computer science PhD student at the College of Engineering and Computer Science, University of Central Florida. I do my research at the Center for Research in Computer Vision (CRCV) lab at UCF under the guidance of Prof. Mubarak Shah. I am specifically driven towards classical computer vision algorithms employed in conjunction with Deep Learning. I'm also interested in Self Supervised learning in the vision domain. I completed my Bachelor's of Technology in Information Technology from Guru Gobind Singh Indraprastha University, New Delhi, India.<br>Previously, I was a research associate at the department of ECE, Indian Institute of Science, India, where I worked on Unsupervised Domain Adaption. Visit the publication tab for an up-to-date list of my publications.<br><br>In parallel to my research, I support efforts for more open, collaborative, and reproducible science. In my free time I enjoy making simple digital circuitry and programming. For collaborations, please get in touch.
+                    <div id="aboutme-body" class="content">
                     </div>
                 </div>
             </div>
@@ -58,25 +58,9 @@
                 <div style="height:400px; margin-bottom: 1rem; margin-right: 1rem;">
                     <div class="news-head">News & Updates</div>
                     <div onMouseOver="pauseDiv()" onMouseOut="resumeDiv()" id="scrollme" class="news-body">
-                        <ul>
+                        <ul id="news-update">
                           <br><br><br>
-                          <li><b>Dec 2021</b>: Started working with <a href="https://sites.google.com/view/prathosh/home">Dr. Pratosh AP</a> as a Research Associate at <b>IISc, Bengaluru</b><span class="pulsate">NEW!</span></li>
-                          <li><b>Sept 2021</b>: Started working with <a href="https://www.crcv.ucf.edu/person/mubarak-shah/">Mubarak Shah</a> as a Remote Intern</li>
-                          <li><b>May 2021</b>: Reviewed a manuscript at EURASIP Journal on Advances in Signal Processing</li>
-                          <li><b>Jan 2021</b>: Published a research paper on automatic automobile accident detection through CCTV at Soft Computing, Springer</li>
-                          <li><b>Nov 2020</b>: Started as a Product Engineer and Instructor for Machine Learning & Data Science at Coding Blocks Pvt Ltd</li>
-                          <li><b>Jul 2020</b>: Reviewed 7 manuscripts as a subreviewer at JIFS Special Issue: Digital Transformation through Advances in Artificial Intelligence and Machine Learning</li>
-                          <li><b>Jan 2020</b>: Started working with <a href=" http://aiactr.ac.in/index.php/academics/26-manju-khari-">Dr Manju Khari</a> on Accident Detection</li>
-                          <li><b>Aug 2020</b>: Published a research paper, CamAspect: An Intelligent Automated Real-Time Surveillance System with Smartphone Indexing at IEEE Sensor Letters</li>
-                          <li><b>Mar 2020</b>: Published a research paper on Background & Foreground Segmentation at the 3rd International Conference on Computing Informatics and Networks, Springer</li>
-                          <li><b>Jan 2020</b>: Started working with <a href="https://www.it.bvcoend.ac.in/site/home/index/242">Prof Vanita Jain</a> on camera-based surveillance systems</li>
-                          <li><b>Jan 2020</b>: Started working with <a href="https://scholar.google.co.in/citations?user=c9aqOUQAAAAJ&hl=en">Puneet Singh Lamba</a> on Eye-BLink Detection</li>
-                          <li><b>Dec 2019</b>: Started working with <a href="http://www.gopalchaudhary.com/2020/06/dr-gopal.html?m=1">Dr Gopal Chaudhary</a> on Image Compression</li>
-                          <li><b>Jul 2019</b>: Voluteered as a Mentor in Machine Learning for "Summer of Algorithm" program conducted by Pyjaipur</li>
-                          <li><b>Jun 2019</b>: Started as a Teaching Assistant for Machine Learning at Coding Blocks Pvt Ltd</li>
-                          <li><b>Nov 2018</b>: First research paper published on Depression Detection using Audio Sentiment Analysis at International Journal of Information Systems & Management Science</li>
-                          <li><b>Aug 2017</b>: Joined BVCOE, New Delhi</li>
-                          <br><br><br>
+                          <br id="lastnode"><br><br>
                         </ul>
                     </div>
                 </div>
