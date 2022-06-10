@@ -129,7 +129,7 @@ function loadProj(){
                 const metaNode = projNode.lastChild.lastChild;
 
                 for (const [key, val] of Object.entries(value)){
-                    if(val == "") continue;
+                    if((key === "date") || val == "") continue;
                     metaNode.appendChild(createNodeFromHTML(`<div onclick="window.open('${val}', '_blank')" class="pub-meta">${key}</div>`));
                 }
             }
