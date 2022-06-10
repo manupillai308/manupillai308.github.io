@@ -20,6 +20,11 @@
     color: #15617A;
     margin-bottom: 0.5rem;
     max-width: fit-content;
+    cursor: pointer;
+}
+
+.proj-title:hover {
+    text-decoration: underline;
 }
 
 .proj-desc {
@@ -43,6 +48,8 @@
     border-radius: 10%;
     color: #15617A;
     padding: 0.1rem 0.4rem;
+    text-transform: capitalize;
+    cursor: pointer;
 }
 
 .pub-meta:hover {

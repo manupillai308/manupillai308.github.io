@@ -11,9 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./academicons-1.9.2/css/academicons.min.css"/>
+    <script src="/scripts/loader.js"></script>
     <title>Manu S Pillai</title>
   </head>
-  <body>
+  <body onload="loadProj()">
       <div class="main">
         <div class="header">
             <div id="title">
@@ -35,32 +36,9 @@
         <div class="container">
             <div id="heading">
                 <div class="header-style">Projects</div>
-                <div class="body-style">
-                    <div class="proj-container">
-                        <div class="proj-image box-shadow" style="background: url(/images/project_icons/shhtalk.png) no-repeat center;"></div>
-                        <div style="max-width: calc(100% - 150px); min-width: 300px; padding: 1rem">
-                            <div class="proj-title">shhTalk</div>
-                            <div class="proj-desc">
-                                shhTalk lets you create an anonymous group chatroom over your WIFI hotspot or across the internet. All you need is some friends and all they need is your hotspot connection (dont need to share the internet) if using offline room functionality.
-                            </div>
-                            <div style="display: flex; margin: 0.3rem 0; align-items: center;">
-                                <div class="pub-meta">Paper</div>
-                                <div class="pub-meta">Code</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="proj-container">
-                        <div class="proj-image box-shadow" style="background: url(/images/project_icons/iwd.jpg) no-repeat center;"></div>
-                        <div style="max-width: calc(100% - 150px); min-width: 300px; padding: 1rem">
-                            <div class="proj-title">IWD</div>
-                            <div class="proj-desc">
-                                A natural river often finds good paths among lots of possible paths in its ways from the source to destination. These near optimal or optimal paths are obtained by the actions and reactions that occur among the water drops and the water drops with the riverbeds. The intelligent water drops (IWD) algorithm is a new swarm-based optimisation algorithm inspired from observing natural water drops that flow in rivers.
-                            </div>
-                            <div style="display: flex; margin: 0.3rem 0; align-items: center;">
-                                <div class="pub-meta">Paper</div>
-                                <div class="pub-meta">Code</div>
-                            </div>
-                        </div>
+                <div id="project" class="body-style">
+                    <div>
+                        <i style="color: #774418" class="fa fa-spinner fa-spin fa-2x"></i>
                     </div>
                 </div>
             </div>

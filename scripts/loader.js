@@ -102,3 +102,38 @@ function loadContact(){
         img.style.display = "block";
     });
 }
+
+function loadProj(){
+    const projlist = `<div class="proj-container">
+        <div class="proj-image box-shadow" style="background: url($$IMG_LINK$$) no-repeat center;"></div>
+        <div style="max-width: calc(100% - 150px); min-width: 300px; padding: 1rem">
+            <div onclick="window.open('$$LINK$$', '_blank')" class="proj-title">$$TITLE$$</div>
+            <div class="proj-desc">$$DESC$$</div>
+            <div style="display: flex; margin: 0.3rem 0; align-items: center;"></div></div></div>`;
+    function projLoader(what){
+        fetch(endpointUrl+`/projects`)
+        .then((res) => res.json())
+        .then(data => {
+            const project = document.getElementById("project");
+            project.removeChild(project.firstElementChild);
+
+            for (const value of Object.values(data)){
+                var publist_html = projlist.replace("$$TITLE$$", value["head"]["title"]).replace("$$LINK$$", value["head"]["link"].trim()).replace("$$IMG_LINK$$", value["image"]).replace("$$DESC$$", value["desc"]);
+
+                delete value["head"];
+                delete value["image"];
+                delete value["desc"];
+                const projNode = createNodeFromHTML(publist_html);
+                project.appendChild(projNode);
+
+                const metaNode = projNode.lastChild.lastChild;
+
+                for (const [key, val] of Object.entries(value)){
+                    if(val == "") continue;
+                    metaNode.appendChild(createNodeFromHTML(`<div onclick="window.open('${val}', '_blank')" class="pub-meta">${key}</div>`));
+                }
+            }
+        });
+    }
+    projLoader();
+}
