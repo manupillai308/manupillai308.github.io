@@ -22,7 +22,7 @@
             </div>
             <div id="nav-bar">
                 <div id="nav-item">
-                    <div onclick="location.href='/index.html'">Home</div>
+                    <div style="border-bottom: 2px solid;" onclick="location.href='/index.html'">Home</div>
                     <div onclick="location.href='/projects.html'">Projects</div>
                     <div onclick="location.href='/publications.html'">Publications</div>
                     <div onclick="location.href='/teachings.html'">Teachings</div>
@@ -37,16 +37,17 @@
                 <div class="header-style">About Me</div>
                 <div class="body-style">
                     <div>
-                        <div id="aboutme-image" class="image box-shadow"></div>
+                        <div id="aboutme-image" style="display:flex" class="image box-shadow">
+                            <i style="margin: auto;" class="fa fa-spinner fa-spin fa-2x"></i></div>
                         <div class="social">
                             <span class="hover-effect" style="color: #4081EC;">
-                                <i style="margin: 0 1rem;" class="ai ai-google-scholar ai-2x"></i>
+                                <i style="margin: 0 1rem; cursor: pointer;" class="ai ai-google-scholar ai-2x"></i>
                             </span>
                             <span class="hover-effect" style="color: #000000;">
-                                <i style="margin: 0 1rem;"  class="fa fa-github fa-2x"></i>
+                                <i style="margin: 0 1rem; cursor: pointer;"  class="fa fa-github fa-2x"></i>
                             </span>
                             <span class="hover-effect" style="color: #1C98E5;">
-                                <i style="margin: 0 1rem;" class="fa fa-twitter fa-2x"></i>
+                                <i style="margin: 0 1rem; cursor: pointer;" class="fa fa-twitter fa-2x"></i>
                             </span>
                         </div>
                     </div>
@@ -64,43 +65,13 @@
                         </ul>
                     </div>
                 </div>
-                <div class="carousal">
+                <div id="carousel" class="carousal">
                     <div class="mySlides fade">
-                        <div class="numbertext">1 / 6</div>
-                        <div class="car-image box-shadow" style="background-image: url(/images/carousel/1.jpg);"></div>
-                        <div class="text">Being awarded by the Chief Minister of Odisha, 2019</div>
+                        <div class="numbertext"><i class="fa fa-spinner fa-spin"></i></div>
+                        <div class="car-image box-shadow" style="background-image: url();"></div>
+                        <div class="text">Loading <i class="fa fa-spinner fa-spin"></i></div>
                     </div>
-                    <div class="mySlides fade">
-                        <div class="numbertext">2 / 6</div>
-                        <div class="car-image box-shadow" style="background-image: url(/images/carousel/2.jpg);"></div>
-                        <div class="text">Presenting our winning project at the Smart Odisha Conclave, 2019</div>
-                    </div>
-                    <div class="mySlides fade">
-                        <div class="numbertext">3 / 6</div>
-                        <div class="car-image box-shadow" style="background-image: url(/images/carousel/3.jpg);"></div>
-                        <div class="text">Presenting our work to Judges from HCL at Smart India Hackathon, 2019</div>
-                    </div>
-                    <div class="mySlides fade">
-                        <div class="numbertext">4 / 6</div>
-                        <div class="car-image box-shadow" style="background-image: url(/images/carousel/4.jpg);"></div>
-                        <div class="text">Tech Lead at Association for Computing Machinery Student Chapter, 2019</div>
-                    </div>
-                    <div class="mySlides fade">
-                        <div class="numbertext">5 / 6</div>
-                        <div class="car-image box-shadow" style="background-image: url(/images/carousel/5.jpg);"></div>
-                        <div class="text">With GitHub COO Erica Brescia</div>
-                    </div>
-                    <div class="mySlides fade">
-                        <div class="numbertext">6 / 6</div>
-                        <div class="car-image box-shadow" style="background-image: url(/images/carousel/6.jpg);"></div>
-                        <div class="text">Head coordinator at the annual techfest of our college, 2019</div>
-                    </div>
-                    <div style="text-align:center">
-                        <span class="dot"></span> 
-                        <span class="dot"></span> 
-                        <span class="dot"></span> 
-                        <span class="dot"></span> 
-                        <span class="dot"></span> 
+                    <div id="dot" style="text-align:center">
                         <span class="dot"></span> 
                     </div>
                 </div>
@@ -110,7 +81,7 @@
         <div class="footer">
             <div style="font-size: 1rem; margin-left: 11%; font-weight: 600; color: white;">Connect with me</div>
             <div style="margin-left: auto; margin-right:11%;">
-                <span style="color: white; margin: 0 0.5rem;">
+                <span style="color: white; margin: 0 0.5rem; cursor: pointer;">
                     <i class="ai ai-researchgate ai-2x"></i>
                 </span>
                 <!-- <span style="color: white; margin: 0 0.5rem;">
@@ -119,7 +90,7 @@
                 <span style="color: white; margin: 0 0.5rem;">
                     <i class="ai ai-orcid ai-2x"></i> -->
                 </span>
-                <span style="color: white; margin: 0 0.5rem;">
+                <span style="color: white; margin: 0 0.5rem; cursor: pointer;">
                     <i class="fa fa-linkedin fa-2x"></i>
                 </span>
             </div>

@@ -281,3 +281,8 @@ ul li {
       color: red;
     }
 }
+
+#nav-item > div:hover {
+    border-bottom: 2px solid;
+    cursor: pointer;
+}
