@@ -60,6 +60,8 @@ function loadPub(){
         .then((res) => res.json())
         .then(data => {
             const which = document.getElementById(`${what}`);
+            which.removeChild(which.firstElementChild);
+
             // authors, date, doi, paper, project, talk, title, code, new
             for (const value of Object.values(data)){
                 var publist_html = publist.replace("$$TITLE$$", value["title"]).replace("$$AUTHORS$$", value["authors"].trim());
@@ -91,4 +93,12 @@ function loadPub(){
     pubLoader("bookchapter");
 }
 
-{/* <span class="pulsate">NEW!</span> */}
+function loadContact(){
+    fetch(endpointUrl+"/contact")
+    .then((res) => res.json())
+    .then((d) => {
+        const img = document.getElementById("contact-image");
+        img.src = `${d["image"]}`;
+        img.style.display = "block";
+    });
+}

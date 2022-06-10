@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./academicons-1.9.2/css/academicons.min.css"/>
+    <script src="/scripts/loader.js"></script>
     <title>Manu S Pillai</title>
     <script>
         function toggle_mail(){
@@ -26,7 +27,7 @@
         }
     </script>
   </head>
-  <body>
+  <body onload="loadContact()">
       <div class="main">
         <div class="header">
             <div id="title">
@@ -62,7 +63,7 @@
                             manu[dot]pillai@knights.ucf.edu
                         </div>
                     </div>
-                    <img src="/images/contact_banner.jpg" class="contact-image box-shadow" />
+                    <img id="contact-image" style="display: none;" class="contact-image box-shadow" />
                 </div>
             </div>
         </div>
