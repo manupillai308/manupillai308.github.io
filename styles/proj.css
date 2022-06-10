@@ -35,6 +35,8 @@
 
 .proj-image {
     background-size: contain;
+    background-repeat: no-repeat; 
+    background-position: center;
     width: 150px;
     height: 150px;
     margin: auto 0;

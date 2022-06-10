@@ -1,4 +1,5 @@
 endpointUrl = "http://127.0.0.1:3000";
+imurlEndpoint = endpointUrl + "/imurl?im="
 
 function createNodeFromHTML(string) {
     var div = document.createElement('div');
@@ -11,8 +12,10 @@ function loadMain(){
     .then((res) => res.json())
     .then((d) => {
         const img = document.getElementById("aboutme-image");
-        img.style.backgroundImage = `url(${d["image"]})`;
-        img.innerHTML = "";
+        fetch(imurlEndpoint+d["image"]).then(res=>res.json()).then(d=>{
+            img.style.backgroundImage = `url(${d})`;
+            img.innerHTML = "";
+        });
         document.getElementById("aboutme-body").innerHTML = d["body"];
     });
 
@@ -31,22 +34,24 @@ function loadMain(){
     .then(data => {
         const carousel = document.getElementById("carousel");
         const dot = document.getElementById("dot");
-        carousel.removeChild(carousel.firstElementChild);
-        dot.removeChild(dot.firstElementChild);
         let i = 1, t = Object.entries(data).length;
         for (const value of Object.values(data)){
-            const carNode = createNodeFromHTML(`<div class="mySlides fade">
-            <div class="numbertext">${i} / ${t}</div>
-            <div class="car-image box-shadow" style="background-image: url(${value["image"]});"></div>
-            <div class="text">${value["caption"]}</div>
-        </div>`);
+            fetch(imurlEndpoint+value["image"]).then(res=>res.json()).then(d=>{
+                if(i==1){
+                    carousel.removeChild(carousel.firstElementChild);
+                    dot.removeChild(dot.firstElementChild);
+                }
+                const carNode = createNodeFromHTML(`<div class="mySlides fade">
+                    <div class="numbertext">${i} / ${t}</div>
+                    <div class="car-image box-shadow" style="background-image: url(${d});"></div>
+                    <div class="text">${value["caption"]}</div>
+                </div>`);
             carousel.insertBefore(carNode, dot); i++;
             const newDot = createNodeFromHTML(`<span class="dot"></span>`);
             dot.appendChild(newDot);
+            });
         }
-    })
-
-
+    });
 }
 
 function loadPub(){
@@ -105,7 +110,7 @@ function loadContact(){
 
 function loadProj(){
     const projlist = `<div class="proj-container">
-        <div class="proj-image box-shadow" style="background: url($$IMG_LINK$$) no-repeat center;"></div>
+        <div class="proj-image box-shadow" style="background-image: url(); display:flex;"><i style="margin: auto; color: #15617A;" class="fa fa-spinner fa-spin fa-2x"></i></div>
         <div style="max-width: calc(100% - 150px); min-width: 300px; padding: 1rem">
             <div onclick="window.open('$$LINK$$', '_blank')" class="proj-title">$$TITLE$$</div>
             <div class="proj-desc">$$DESC$$</div>
@@ -116,16 +121,19 @@ function loadProj(){
         .then(data => {
             const project = document.getElementById("project");
             project.removeChild(project.firstElementChild);
-
             for (const value of Object.values(data)){
-                var publist_html = projlist.replace("$$TITLE$$", value["head"]["title"]).replace("$$LINK$$", value["head"]["link"].trim()).replace("$$IMG_LINK$$", value["image"]).replace("$$DESC$$", value["desc"]);
+                var publist_html = projlist.replace("$$TITLE$$", value["head"]["title"]).replace("$$LINK$$", value["head"]["link"].trim()).replace("$$DESC$$", value["desc"]);
 
                 delete value["head"];
-                delete value["image"];
                 delete value["desc"];
                 const projNode = createNodeFromHTML(publist_html);
                 project.appendChild(projNode);
 
+                fetch(imurlEndpoint+value["image"]).then(res=>res.json()).then(d=>{
+                    projNode.firstElementChild.style.backgroundImage = `url(${d})`;
+                    projNode.firstElementChild.innerHTML = "";
+                });
+                delete value["image"];
                 const metaNode = projNode.lastChild.lastChild;
 
                 for (const [key, val] of Object.entries(value)){
