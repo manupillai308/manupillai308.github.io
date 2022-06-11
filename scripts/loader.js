@@ -1,4 +1,4 @@
-endpointUrl = "http://127.0.0.1:3000";
+endpointUrl = "https://manuspillai-backend.herokuapp.com";
 imurlEndpoint = endpointUrl + "/imurl?im="
 
 function createNodeFromHTML(string) {
