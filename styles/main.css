@@ -53,13 +53,47 @@ body {
     justify-content: center;
 }
 
-#nav-item{
+#nav-item {
     display: flex;
     justify-content: space-around;
     padding-left: 1em;
     padding-right: 1em;
     width: 95vh;
     color: #BC6C25;
+}
+
+#nav-button {
+    max-width: fit-content;
+    margin: 0 auto;
+    border-radius: 5%;
+    background-color: #15617A;
+    padding: 0.1rem 0.5rem;
+    color: white;
+    background-color: #BC6C25;
+    display: none;
+}
+
+@media (max-width: 550px) {
+    #nav-button {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+    #nav-bar {
+        flex-direction: column;
+    }
+    #nav-item {
+        display: none;
+    }
+    #nav-item > div {
+        margin: 0.2rem 0;
+    }
+
+    #nav-bar .show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
 }
 
 #worktitle {

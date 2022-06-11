@@ -21,6 +21,9 @@
                 <div id="worktitle">PhD Student @ CECS, University of Central Florida</div>
             </div>
             <div id="nav-bar">
+                <div onclick="toggle_menu()" id="nav-button">
+                    Menu <i id="mailicon" style="display: inline; margin-left: 1px;" class="fa fa-angle-down"></i>
+                </div>
                 <div id="nav-item">
                     <div style="border-bottom: 2px solid;" onclick="location.href='/index.html'">Home</div>
                     <div onclick="location.href='/projects.html'">Projects</div>
@@ -36,6 +39,17 @@
                     </div>
                     <div onclick="location.href='/contact.html'">Contact</div>
                 </div>
+                <script>
+                    function toggle_menu(){
+                        let mailicon = document.getElementById("mailicon");
+                        let menubar = document.getElementById("nav-item");
+                        if (mailicon.className === "fa fa-angle-up")
+                            mailicon.className = "fa fa-angle-down";
+                        else 
+                            mailicon.className = "fa fa-angle-up";
+                        menubar.classList.toggle("show");
+                    }
+                </script>
             </div>
         </div>
         <div class="container">
