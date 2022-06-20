@@ -8,16 +8,16 @@ function createNodeFromHTML(string) {
 }
 
 function loadMain(){
-    fetch(endpointUrl+"/aboutme")
-    .then((res) => res.json())
-    .then((d) => {
-        const img = document.getElementById("aboutme-image");
-        fetch(imurlEndpoint+d["image"]).then(res=>res.json()).then(d=>{
-            img.style.backgroundImage = `url(${d})`;
-            img.innerHTML = "";
-        });
-        document.getElementById("aboutme-body").innerHTML = d["body"];
-    });
+    // fetch(endpointUrl+"/aboutme")
+    // .then((res) => res.json())
+    // .then((d) => {
+    //     const img = document.getElementById("aboutme-image");
+    //     fetch(imurlEndpoint+d["image"]).then(res=>res.json()).then(d=>{
+    //         img.style.backgroundImage = `url(${d})`;
+    //         img.innerHTML = "";
+    //     });
+    //     document.getElementById("aboutme-body").innerHTML = d["body"];
+    // });
 
     fetch(endpointUrl+"/newsupdate")
     .then((res) => res.json())
