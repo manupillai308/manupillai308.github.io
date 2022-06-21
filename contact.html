@@ -16,7 +16,7 @@
     <script>
         function toggle_mail(){
             mailid = document.getElementById("mailid");
-            mailicon = document.getElementById("mailicon");
+            mailicon = document.getElementById("emailicon");
             if(mailid.style.visibility == "hidden"){
                 mailid.style.visibility = "visible";
                 mailicon.className = "fa fa-angle-up";
@@ -77,7 +77,7 @@
                         </div>
                         <div class="contact-btn" onclick="toggle_mail()">
                             Email
-                            <i id="mailicon" style="display: inline; margin-left: 5px;" class="fa fa-angle-down"></i>
+                            <i id="emailicon" style="display: inline; margin-left: 5px;" class="fa fa-angle-down"></i>
                         </div>
                         <div id="mailid" style="bottom: 10px; margin: 0.5rem auto; visibility: hidden;font-size:0.9rem; position: static;">
                             manu[dot]pillai@knights.ucf.edu
